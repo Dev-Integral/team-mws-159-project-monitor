@@ -1,10 +1,9 @@
-# team-mws-159-project-monitor
-
+# team-mws-159-project-monitor<br/>
+<br/>
 #Steps to contribute
-
-Fork the repo
-Clone your forked repo
-create a branch
-update the CONTRIBUTORS.md file with your details in this format [@github_username](your github url) [Slack Username: your_slack_username]
-make your contribution by creating a folder with youur name, paste your codes for each week as study in orderly manner, then push
+<br/>
+Fork the repo<br/>
+Clone your forked repo<br/>
+create a branch<br/>
+make your contribution by creating a folder with youur name, paste your codes for each week as study in orderly manner, then push<br/>
 make a pull request and wait for admin to respond.
