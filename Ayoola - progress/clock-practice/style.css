@@ -10,13 +10,21 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #094f6e;
+    background: #14587a;
+}
+.headTitle{
+    font-family: cursive;
+    color: #fff;
+    padding: 30px 0 0 0;
+}
+.headTitleOne, .headTitleThree{
+    color: crimson;
 }
 .clock{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 350px;
-    height: 350px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 280px;
+    height: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,12 +99,53 @@ body{
 }
 .digiClock{
     background-color: beige;
-    position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
-  
+  }
+  .digiHour, .digiMin, .digiSec{
+      width: 150px;
+      height: 150px;
+      margin-right: 5px;
+      display: flex;
+      flex-direction: column;
+      background-color: #14587a;
+      border-radius: 2% solid #091921;
+  }
+  .digiHr, .digiMn, .digiSc{
+      display: flex;
+      justify-content: center;
+      align-items: top;
+      color: antiquewhite;
+      font-family: fantasy; 
+      font-size: 60px;
+      position: relative;
+      top: 20px;
+  }
+  .content{
+      color: antiquewhite;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      bottom: -40px;
+      text-transform: capitalize;
+  }
+  .dateSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dateUi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dateUi p{
+      color: #fff;
+      justify-content: center;
+      align-items: center;
   }
   

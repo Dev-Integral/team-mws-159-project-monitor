@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <h1 class="headTitle"><span class="headTitleOne">My</span><span class="headTitleTwo">Watch</span><span class="headTitleThree">Play</span></h1>
     <section class="clock">
         <div class="hour">
             <div class="hr" id="hr"></div>
@@ -20,31 +21,66 @@
     </section>
     <section class="digiClock">
         <div class="digiHour">
-            <div class="digiHr">
-            </div>
-            <div class="digiMn">
-            </div>
-            <div class="digiSc">
-            </div>
+            <div class="digiHr" id="digiHr"></div>
+            <div class="content">Hour</div>
+        </div>
+        <div class="digiMin">
+            <div class="digiMn" id="digiMn"></div>
+            <div class="content">Minutes</div>
+        </div>
+        <div class="digiSec">
+            <div class="digiSc" id="digiSc"></div>
+            <div class="content">Seconds</div>
+        </div>
+    </section>
+    <section class="dateSection">
+        <div class="dateUi" id="dateUi">
+            <p id="day"></p>
         </div>
     </section>
 </body>
 
 <script type="text/javascript">
-	const deg = 6;
+    const deg = 6;
+    
+    // Analog elements
 	const hr = document.querySelector('#hr');
 	const mn = document.querySelector('#mn');
-	const sc = document.querySelector('#sc');
+    const sc = document.querySelector('#sc');
+    const dayString = document.querySelector('#day');
+    
+
+
+    //Digital elements
+    const dhr = document.querySelector('#digiHr');
+	const dmn = document.querySelector('#digiMn');
+    const dsc = document.querySelector('#digiSc');
+    
+
 
     setInterval(()=> {
     let day = new Date();
-	let hh = day.getHours() * 30;
+    let hh = day.getHours() * 30;
 	let mm = day.getMinutes() * deg;
-	let ss = day.getSeconds() * deg;
+    let ss = day.getSeconds() * deg;
 
+    
+    let dhh = day.getHours() ;
+	let dmm = day.getMinutes();
+    let dss = day.getSeconds();
+    let todayString =  day.toDateString();
+
+    //Set inner component for analog clock to rotate 
 	hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
 	mn.style.transform = `rotateZ(${mm}deg)`;
-	sc.style.transform = `rotateZ(${ss}deg)`;
+    sc.style.transform = `rotateZ(${ss}deg)`;
+    
+    // Set inner component for digital clock
+    dhr.innerHTML = dhh;
+	dmn.innerHTML = dmm;
+    dsc.innerHTML = dss;
+    dayString.innerHTML = todayString;
+    
     })
 </script>
 </html>
