@@ -29,13 +29,14 @@
             <div class="content">Minutes</div>
         </div>
         <div class="digiSec">
+            <div class="noon" id="noon"></div>
             <div class="digiSc" id="digiSc"></div>
             <div class="content">Seconds</div>
         </div>
     </section>
     <section class="dateSection">
         <div class="dateUi" id="dateUi">
-            <p id="day"></p>
+            <p><span id="day"></span> | &copy; Integral</p>
         </div>
     </section>
 </body>
@@ -48,7 +49,7 @@
 	const mn = document.querySelector('#mn');
     const sc = document.querySelector('#sc');
     const dayString = document.querySelector('#day');
-    
+    const noon = document.querySelector('#noon')
 
 
     //Digital elements
@@ -64,10 +65,12 @@
 	let mm = day.getMinutes() * deg;
     let ss = day.getSeconds() * deg;
 
-    
-    let dhh = day.getHours() ;
-	let dmm = day.getMinutes();
-    let dss = day.getSeconds();
+    console.log(day.toLocaleTimeString().split(':')[0]);
+
+    let dhh = day.toLocaleTimeString().split(':')[0] ;
+	let dmm = day.toLocaleTimeString().split(':')[1];
+    let dss = day.toLocaleTimeString().split(':')[2].split(' ')[0];
+    let dNoon =day.toLocaleTimeString().split(':')[2].split(' ')[1];
     let todayString =  day.toDateString();
 
     //Set inner component for analog clock to rotate 
@@ -80,6 +83,7 @@
 	dmn.innerHTML = dmm;
     dsc.innerHTML = dss;
     dayString.innerHTML = todayString;
+    noon.innerHTML = dNoon;
     
     })
 </script>
