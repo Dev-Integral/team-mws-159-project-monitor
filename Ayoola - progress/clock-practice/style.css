@@ -67,7 +67,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: top;
-    
     bottom: 0;
 }
 .hr:before{
@@ -84,7 +83,7 @@ body{
     position: absolute;
     width: 4px;
     height: 90px;
-    background: #fff;
+    background: skyblue;
     z-index: 11;
     border-radius: 6px 6px 0 0;
 }
@@ -98,7 +97,7 @@ body{
     border-radius: 6px 6px 0 0;
 }
 .digiClock{
-    background-color: beige;
+    background-color: #fff;
     width: 100%;
     height: 250px;
     display: flex;
@@ -118,7 +117,7 @@ body{
       display: flex;
       justify-content: center;
       align-items: top;
-      color: antiquewhite;
+      color: #fff;
       font-family: fantasy; 
       font-size: 60px;
       position: relative;
@@ -135,7 +134,7 @@ body{
       
   }
   .content{
-      color: antiquewhite;
+      color: #fff;
       font-family: monospace;
       display: flex;
       justify-content: center;
